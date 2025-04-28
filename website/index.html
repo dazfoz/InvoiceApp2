@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolt - Freelance Invoice App</title>
+    <meta name="description" content="Bolt is a powerful invoicing app for freelancers that simplifies invoice creation, client management, and payment tracking.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/placeholders.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">Bolt<span>Invoice</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#screenshots">Screenshots</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="animate">Simplify Your Freelance Invoicing</h1>
+            <p class="animate">Bolt is a powerful invoicing app designed specifically for freelancers. Create professional invoices, manage clients, and track payments - all in one place.</p>
+            <div>
+                <a href="#features" class="btn animate">Explore Features</a>
+                <a href="#contact" class="btn btn-outline animate">Contact Us</a>
+                <a href="#" class="btn btn-outline animate" id="loginButton">Login</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Powerful Features</h2>
+                <p>Bolt comes packed with everything freelancers need to manage their invoicing process efficiently.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card animate">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-invoice"></i>
+                    </div>
+                    <h3>Professional Invoices</h3>
+                    <p>Create professional-looking invoices in seconds with customizable templates and your own branding.</p>
+                </div>
+                <div class="feature-card animate">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Client Management</h3>
+                    <p>Easily manage your clients' information, contact details, and invoicing history in one place.</p>
+                </div>
+                <div class="feature-card animate">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h3>PDF Generation</h3>
+                    <p>Generate professional PDF invoices that can be easily shared with clients via email or download.</p>
+                </div>
+                <div class="feature-card animate">
+                    <div class="feature-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Integration</h3>
+                    <p>Send invoices directly to clients via email with pre-filled professional messages.</p>
+                </div>
+                <div class="feature-card animate">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Payment Tracking</h3>
+                    <p>Keep track of paid, pending, and overdue invoices with visual indicators and notifications.</p>
+                </div>
+                <div class="feature-card animate">
+                    <div class="feature-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Multi-Company Support</h3>
+                    <p>Manage multiple businesses or freelance identities from a single account with ease.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section id="screenshots" class="screenshots">
+        <div class="container">
+            <div class="section-title">
+                <h2>App Screenshots</h2>
+                <p>Take a look at Bolt's intuitive interface and powerful features in action.</p>
+            </div>
+            <div class="screenshots-container">
+                <div class="screenshot-item animate">
+                    <div class="screenshot-image">
+                        <div class="placeholder-image invoice-creation" data-title="Invoice Creation Screen"></div>
+                    </div>
+                    <div class="screenshot-content">
+                        <h3>Easy Invoice Creation</h3>
+                        <p>Creating invoices is simple and intuitive with Bolt's user-friendly interface.</p>
+                        <ul>
+                            <li>Add line items with descriptions, quantities, and prices</li>
+                            <li>Automatic tax calculation based on your settings</li>
+                            <li>Add notes and payment terms for your clients</li>
+                            <li>Preview invoices before finalizing</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="screenshot-item animate">
+                    <div class="screenshot-image">
+                        <div class="placeholder-image client-management" data-title="Client Management Screen"></div>
+                    </div>
+                    <div class="screenshot-content">
+                        <h3>Comprehensive Client Management</h3>
+                        <p>Keep all your client information organized and accessible.</p>
+                        <ul>
+                            <li>Store client contact details and addresses</li>
+                            <li>View invoice history for each client</li>
+                            <li>Track outstanding balances</li>
+                            <li>Add notes and custom fields for better organization</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="screenshot-item animate">
+                    <div class="screenshot-image">
+                        <div class="placeholder-image pdf-generation" data-title="PDF Invoice Generation"></div>
+                    </div>
+                    <div class="screenshot-content">
+                        <h3>Professional PDF Invoices</h3>
+                        <p>Generate beautiful, professional PDF invoices that impress your clients.</p>
+                        <ul>
+                            <li>Customizable invoice templates</li>
+                            <li>Include your company logo and branding</li>
+                            <li>Detailed line items and payment information</li>
+                            <li>Share directly via email or download</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Freelancers Say</h2>
+                <p>Hear from freelancers who have simplified their invoicing process with Bolt.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card animate">
+                    <div class="testimonial-text">
+                        "Bolt has completely transformed how I handle invoicing. I used to spend hours creating invoices and following up with clients, but now it's all automated and professional."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">S</div>
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>Graphic Designer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card animate">
+                    <div class="testimonial-text">
+                        "The PDF generation feature alone is worth it. My clients are impressed with the professional invoices, and I can track everything in one place. Highly recommended!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">M</div>
+                        <div class="author-info">
+                            <h4>Michael Chen</h4>
+                            <p>Web Developer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card animate">
+                    <div class="testimonial-text">
+                        "As someone who manages multiple freelance businesses, the multi-company support is a game-changer. I can switch between my different services without any confusion."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">E</div>
+                        <div class="author-info">
+                            <h4>Emma Rodriguez</h4>
+                            <p>Marketing Consultant</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2 class="animate">Ready to Simplify Your Invoicing?</h2>
+            <p class="animate">Join thousands of freelancers who have streamlined their invoicing process with Bolt.</p>
+            <a href="#contact" class="btn animate">Get Started Today</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+                <p>Have questions about Bolt? We're here to help!</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p>Feel free to reach out to us with any questions or feedback about the Bolt Freelance Invoice App.</p>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> support@boltinvoice.com</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 App Street, San Francisco, CA 94107</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>Bolt Invoice</h3>
+                    <p>The ultimate invoicing solution for freelancers and small businesses.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Features</h3>
+                    <ul>
+                        <li><a href="#features">Invoice Creation</a></li>
+                        <li><a href="#features">Client Management</a></li>
+                        <li><a href="#features">PDF Generation</a></li>
+                        <li><a href="#features">Email Integration</a></li>
+                        <li><a href="#features">Payment Tracking</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Tutorials</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Bolt Invoice App. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginButton = document.getElementById('loginButton');
+            if (loginButton) {
+                loginButton.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    // Send message to Flutter
+                    window.parent.postMessage('navigateToLogin', '*');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

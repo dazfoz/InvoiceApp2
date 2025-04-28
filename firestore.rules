@@ -1,0 +1,65 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isCompanyMember(companyId) {
+      return isAuthenticated() && 
+        (exists(/databases/$(database)/documents/companies/$(companyId)/members/$(request.auth.uid)) ||
+         exists(/databases/$(database)/documents/users/$(request.auth.uid)/companies/$(companyId)));
+    }
+    
+    function isCompanyAdmin(companyId) {
+      return isAuthenticated() && 
+        (get(/databases/$(database)/documents/companies/$(companyId)/members/$(request.auth.uid)).data.role == 'admin' ||
+         get(/databases/$(database)/documents/users/$(request.auth.uid)/companies/$(companyId)).data.role == 'admin');
+    }
+
+    // Users collection
+    match /users/{userId} {
+      allow read: if request.auth.uid == userId;
+      allow write: if request.auth.uid == userId;
+    }
+
+    // Companies collection
+    match /companies/{companyId} {
+      // Allow read if user is a member of the company
+      allow read: if isCompanyMember(companyId);
+      
+      // Allow create if user is authenticated
+      allow create: if isAuthenticated();
+      
+      // Allow update/delete if user is an admin of the company
+      allow update, delete: if isCompanyAdmin(companyId);
+      
+      // Members subcollection
+      match /members/{userId} {
+        allow read: if isCompanyMember(companyId);
+        // Allow write if user is admin OR if it's the first member being added
+        allow write: if isCompanyAdmin(companyId) || 
+          (request.auth.uid == userId && !exists(/databases/$(database)/documents/companies/$(companyId)/members/$(userId)));
+      }
+      
+      // Clients subcollection
+      match /clients/{clientId} {
+        allow read: if isCompanyMember(companyId);
+        allow write: if isCompanyMember(companyId);
+      }
+      
+      // Invoices subcollection
+      match /invoices/{invoiceId} {
+        allow read: if isCompanyMember(companyId);
+        allow write: if isCompanyMember(companyId);
+      }
+
+      // Subscription subcollection
+      match /subscription/{subscriptionId} {
+        allow read: if isCompanyMember(companyId);
+        allow write: if isCompanyAdmin(companyId);
+      }
+    }
+  }
+} 
